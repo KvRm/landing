@@ -50,19 +50,83 @@ header nav li{
     display: inline-block;
     margin-right: 10%;
 }
-header nav li a {
+header nav li a, .contact p{
     color: white;
     font-size: 20px;
 }
-header nav li:last-child{
+.contact{
+    position: relative;
     margin-right: 0;
 }
-header a:hover, header img:hover, #slider button:hover {
+header a:hover, header img:hover, #slider button:hover, .contact p:hover{
     text-shadow: 0 0 3px azure;
     cursor: pointer;
 }
 #slider button:hover {
     box-shadow: 0 0 7px rgb(124, 124, 255);
+}
+.AboutInfo {
+    position: absolute;
+    display: none;
+    top: 30px;
+    left: -25px;
+    width: 150px;
+    height: 0px;
+    background-color: rgb(124, 124, 255);
+    border-radius: 5px;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: height 0.5s, opacity 0.25s;
+    opacity: 0;
+}
+.openMenu {
+    height: 280% !important;
+    opacity: 1;
+}
+.AboutInfo li {
+    display: none;
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+.AboutInfo li a{
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    font-size: 20px;
+}
+.vk::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 7px;
+    background: url('../img/vk.png') 0 0/30px no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.github::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 7px;
+    background: url('../img/github.png') 0 0/30px no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.telegram::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 7px;
+    background: url('../img/telegram.png') 0 0/30px no-repeat;
+    width: 30px;
+    height: 30px;
 }
 /**************************/
 

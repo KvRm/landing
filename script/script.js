@@ -59,10 +59,28 @@ function prevPic() {
     }
     localStorage.setItem('currentPhotoID', JSON.stringify(currentPhotoID));
 }
-
 let contact = document.querySelector('.contact');
-contact.onclick = function() {
-    let contactUl = document.createElement('ul');
-    let contactLi = document.createElement('li');
-    
+contact.addEventListener('click', openMenu);
+
+function openMenu() {
+    let AboutInfo = document.querySelector('.AboutInfo');
+    let AboutInfoLi = document.querySelectorAll('.AboutInfo li');
+    if (AboutInfo.style.display != 'block') {
+        AboutInfo.style.display = 'block';
+        setTimeout(transitionOpen,1)
+        function transitionOpen() {
+            AboutInfo.classList.add('openMenu');
+            for (let elem of AboutInfoLi)
+                elem.style.display = 'block';
+        }
+    }
+    else {
+        AboutInfo.classList.remove('openMenu');
+        setTimeout(transitionClose,600);
+        function transitionClose() {
+            AboutInfo.style.display = 'none';
+            for (let elem of AboutInfoLi)
+                elem.style.display = 'none';
+        }
+    }    
 }
