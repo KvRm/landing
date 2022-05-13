@@ -1,7 +1,7 @@
 'use strict'
 
 let currentPhotoID;
-let photos = ['../WebSite/img/2.jpg','../WebSite/img/3.jpg','../WebSite/img/4.jpg'];
+let photos = ['img/2.jpg','img/3.jpg','img/4.jpg'];
 let description = ['Казань - город, в котором я живу', 'Набережные Челны - город в котором я родился', 'КФУ - ВУЗ, где я учусь'];
 
 let i = 0;
