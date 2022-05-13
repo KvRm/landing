@@ -1,7 +1,6 @@
 window.onload = function() {
     let enter = document.getElementById('enter');
     let todoList = [];
-    let numberOfDeletedStr = 0;
 
     function createNewTodo(str_header) {
         let crossMark = 'img/cross-mark-2986.png';
@@ -20,7 +19,6 @@ window.onload = function() {
         let imgTag = document.createElement('img');
         imgTag.onclick = function() {
             todoList.splice(todo.id,1);
-            numberOfDeletedStr++;
             localStorage.setItem('todo',JSON.stringify(todoList));
             renderTodoList();
         }
